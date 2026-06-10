@@ -28,7 +28,8 @@ git checkout -b feature-borrow-book
 git checkout master
 git checkout -b feature-genre-report
 
-21-22. Настана конфликт во датотеката SI2026Lab1Main.java во методот borrowBook бидејќи и на двете гранки беа направени промени во истите линии код.
+21-22:
+Настана конфликт во датотеката SI2026Lab1Main.java во методот borrowBook бидејќи и на двете гранки беа направени промени во истите линии код.
 Конфликтот го решив со мануелно отворање на датотеката, каде ги избришав Git конфликт маркерите (<<<<<<<, =======, >>>>>>>) и ја задржав верзијата со текст "Borrowed successfully".
 Беше употребена Recursive merge стратегија бидејќи гранките имаа независни промени кои се раздвојуваа од заеднички предок. 
 Излезот од командата 
@@ -41,8 +42,10 @@ Your branch is ahead of 'origin/feature-borrow-book' by 3 commits.
 nothing to commit, working tree clean
 
 
-Чекор 23:
-Спојувањето на гранката feature-genre-report во master се изврши со 'ort' (recursive) стратегија.
+23. Спојувањето на гранката feature-genre-report во master се изврши со 'ort' (recursive) стратегија.
 Бидејќи во Чекор 17 на master гранката веќе направив нов независен commit (Update borrow message on master). Поради ова, master и feature-genre-report имаа разидување во нивните истории, па Git мораше да креира нов Merge commit за да ги спои двете патеки, наместо само да го помести покажувачот напред.
+
+24. Спојувањето на гранката feature-borrow-book во master се изврши со 'ort' (recursive) стратегија.
+Бидејќи двете гранки имаа специфични и различни commits кои се случија паралелно во нивните истории (на master го имавме commit-от од чекор 17 и merge commit-от од чекор 23, додека на feature-borrow-book ги имавме промените за позајмување книги). Поради овие разгранети патеки, мораше да се примени рекурзивно спојување со генерирање на нов заеднички merge commit, бидејќи Fast-forward стратегијата не беше возможна.
 
 
