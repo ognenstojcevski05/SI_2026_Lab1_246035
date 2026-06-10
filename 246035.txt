@@ -26,4 +26,15 @@ git checkout -b feature-borrow-book
 git checkout master
 git checkout -b feature-genre-report
 
-16.  
+21-22. Настана конфликт во датотеката SI2026Lab1Main.java во методот borrowBook бидејќи и на двете гранки беа направени промени во истите линии код.
+Конфликтот го решив со мануелно отворање на датотеката, каде ги избришав Git конфликт маркерите (<<<<<<<, =======, >>>>>>>) и ја задржав верзијата со текст "Borrowed successfully".
+Беше употребена Recursive merge стратегија бидејќи гранките имаа независни промени кои се раздвојуваа од заеднички предок. 
+Излезот од командата 
+git status
+
+On branch feature-borrow-book
+Your branch is ahead of 'origin/feature-borrow-book' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
