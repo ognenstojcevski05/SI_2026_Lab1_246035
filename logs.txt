@@ -1,0 +1,20 @@
+* dcef672 Little update
+*   ed9b5d1 Resolved main function conflicts
+|\  
+| * 3d71a04 Save documentation before switching to master
+| * 1cea0f6 Add documentation draft for borrow-book step
+| *   47bb6dc Resolve merge conflict between master and feature-borrow-book
+| |\  
+| * | a393b6e Implement borrow book
+* | | 76c557c Save master documentation draft before merge
+* | |   7a9627f Merge branch 'feature-genre-report'
+|\ \ \  
+| |_|/  
+|/| |   
+| * | 56c555c Implement genre report
+| |/  
+* / 8b05a8b Update borrow message on master
+|/  
+* f034ec0 Implement book search
+* 4cb2b4d Add starter code
+* b85785a Initial commit
