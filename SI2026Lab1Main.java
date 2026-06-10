@@ -65,16 +65,11 @@ class Library {
     public void borrowBook(String title) {
         for (Book book : books) {
             if (book.getTitle().equalsIgnoreCase(title)) {
-                if (!book.isBorrowed()) {
                     book.setBorrowed(true);
-                    System.out.println("Book borrowed.");
-                } else {
-                    System.out.println("Book is already borrowed.");
-                }
-                return;
+                    System.out.println("Borrowed succesfully");
+                    return;
             }
         }
-        System.out.println("Book not found.");
     }
 
     public void returnBook(String title) {
@@ -126,5 +121,6 @@ public class SI2026Lab1Main {
 
         System.out.println("Library initialized.");
         System.out.println("Search 'Dune' : " + library.searchBookByTitle("Dune"));
+        library.borrowBook("Dune");
     }
 }
