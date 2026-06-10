@@ -1,0 +1,29 @@
+ДЕЛ 1 : Софтверски развој со користење на Git систем за контрола на 
+верзии 
+
+9. За креирање на нова гранка употребив: git checkout -b feature-search-books.
+
+10. Откако е направена промената во класата за feature-search-books направив
+ git add SI2026Lab1Main.java
+ git commit -m "Implement book search"
+
+11. git push -u origin feature-search-books за синхронизација со оддалечениот репозиториум и креирав Pull Request од feature-search-books кон master. 
+
+12-13. За локално спојување во master употребив:
+git checkout master
+git merge feature-search-books
+Спојувањето беше Fast-forward бидејќи немаше никакви нови промени на master гранката од моментот кога се одвои feature гранката, па Git само го помести покажувачот нанапред.
+
+Излез од комадата:
+* f034ec0 (HEAD -> master, origin/feature-search-books, feature-search-books) Implement book search
+* 4cb2b4d (origin/master) Add starter code
+* b85785a Initial commit
+
+14. git push origin master - > за синхронизација на master со оддалечениот репозиториум
+
+15. Команди за креирање 2 гранки од master 
+git checkout -b feature-borrow-book
+git checkout master
+git checkout -b feature-genre-report
+
+16.  
