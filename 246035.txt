@@ -1,24 +1,48 @@
-Чекор 12-13:
-Команди кои се употребени: git checkout master и git merge feature-search-books.
+
+ДЕЛ 1 : Софтверски развој со користење на Git систем за контрола на 
+верзии 
+
+9. За креирање на нова гранка употребив: git checkout -b feature-search-books.
+
+10. Откако е направена промената во класата за feature-search-books направив
+ git add SI2026Lab1Main.java
+ git commit -m "Implement book search"
+
+11. git push -u origin feature-search-books за синхронизација со оддалечениот репозиториум и креирав Pull Request од feature-search-books кон master. 
+
+12-13. За локално спојување во master употребив:
+git checkout master
+git merge feature-search-books
 Спојувањето беше Fast-forward бидејќи немаше никакви нови промени на master гранката од моментот кога се одвои feature гранката, па Git само го помести покажувачот нанапред.
 
-Излез од git log --oneline --graph --all:
+Излез од комадата: git log --oneline --graph --all
+
 * f034ec0 (HEAD -> master, origin/feature-search-books, feature-search-books) Implement book search
 * 4cb2b4d (origin/master) Add starter code
 * b85785a Initial commit
 
-Чекор 21-22:
-Настана конфликт во датотеката SI2026Lab1Main.java во методот borrowBook бидејќи и на двете гранки беа направени промени во истите линии код.
-Конфликтот го решив со мануелно отворање на датотеката, каде ги избришав Git конфликт маркерите (<<<<<<<, =======, >>>>>>>) и ја задржав верзијата со текст "Borrowed successfully".
-Беше употребена 'ort' (recursive) стратегија на спојување бидејќи гранките имаа независни промени кои се раздвојуваа од заеднички предок.
+14. git push origin master - > за синхронизација на master со оддалечениот репозиториум
 
-Излез од git status по завршување на merge-от:
+15. Команди за креирање 2 гранки од master 
+git checkout -b feature-borrow-book
+git checkout master
+git checkout -b feature-genre-report
+
+21-22. Настана конфликт во датотеката SI2026Lab1Main.java во методот borrowBook бидејќи и на двете гранки беа направени промени во истите линии код.
+Конфликтот го решив со мануелно отворање на датотеката, каде ги избришав Git конфликт маркерите (<<<<<<<, =======, >>>>>>>) и ја задржав верзијата со текст "Borrowed successfully".
+Беше употребена Recursive merge стратегија бидејќи гранките имаа независни промени кои се раздвојуваа од заеднички предок. 
+Излезот од командата 
+git status
+
 On branch feature-borrow-book
 Your branch is ahead of 'origin/feature-borrow-book' by 3 commits.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
 
+
 Чекор 23:
 Спојувањето на гранката feature-genre-report во master се изврши со 'ort' (recursive) стратегија.
 Бидејќи во Чекор 17 на master гранката веќе направив нов независен commit (Update borrow message on master). Поради ова, master и feature-genre-report имаа разидување во нивните истории, па Git мораше да креира нов Merge commit за да ги спои двете патеки, наместо само да го помести покажувачот напред.
+
+
